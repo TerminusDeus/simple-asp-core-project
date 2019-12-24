@@ -1,0 +1,25 @@
+@* @model TModel *@
+
+@{
+    ViewBag.Title = "Hi there";
+}
+
+<!DOCTYPE html>
+
+<h1>Welcome to Your Message Page.</h1>
+<br/>
+
+<form asp-controller="Zeus" asp-action="PrintMessage">
+    Leave Your Messages : <input name="Text1" type="text"/>
+    <input id="Submit1" type="submit" value="Output your message below"/>
+</form>
+
+<form asp-controller="Zeus" asp-action="Send">
+    <input id="Submit2" type="submit" value="Output weather data below"/>
+</form>
+
+
+<br/>
+<h2 style="color:red; background-color:burlywood; padding:10px;">
+    @ViewBag.Messages
+</h2>
